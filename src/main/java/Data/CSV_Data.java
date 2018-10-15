@@ -1,6 +1,8 @@
+package Data;
+
 import com.opencsv.bean.CsvBindByName;
 
-public class Data {
+public class CSV_Data {
 
     @CsvBindByName(column = "NPI", required = true)
     private int provider;
@@ -16,20 +18,6 @@ public class Data {
 
     @CsvBindByName(column = "DISCH_DATE_TIME", required = true)
     private int dischargeDate;
-
-    private int serviceDate;
-
-    public Data() {
-    }
-
-    public Data(int provider, int patientSSN, int dateOfBirth, int admissionDate, int dischargeDate, int serviceDate) {
-        this.provider = provider;
-        this.patientSSN = patientSSN;
-        this.dateOfBirth = dateOfBirth;
-        this.admissionDate = admissionDate;
-        this.dischargeDate = dischargeDate;
-        this.serviceDate = serviceDate;
-    }
 
     public int getProvider() {
         return provider;
@@ -51,10 +39,6 @@ public class Data {
         return dischargeDate;
     }
 
-    public int getServiceDate() {
-        return serviceDate;
-    }
-
     public void setProvider(int provider) {
         this.provider = provider;
     }
@@ -73,9 +57,5 @@ public class Data {
 
     public void setDischargeDate(int dischargeDate) {
         this.dischargeDate = dischargeDate;
-    }
-
-    public void setServiceDate(int serviceDate) {
-        this.serviceDate = serviceDate;
     }
 }
