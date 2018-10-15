@@ -5,13 +5,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TS271 {
-    // Looks like ISA date is wrong
     private Date date = new Date();
-    private DateFormat ISAdateFormat = new SimpleDateFormat("yymmdd");
-    private String ISA = "ISA*00*          *00*          *ZZ*RM1P           *ZZ*NCTRACKSBAT    *" +
-            ISAdateFormat.format(date) + "*1432*^*00501*000001333*1*P*:~";
+    private DateFormat ISAdateFormat = new SimpleDateFormat("yyMMdd");
+    private DateFormat GSdateFormat = new SimpleDateFormat("yyyyMMdd");
 
-    private DateFormat GSdateFormat = new SimpleDateFormat("yyyymmdd");
+    private String ISA = "ISA*00*          *00*          *ZZ*RM1P           *ZZ*NCTRACKSBAT    *" + ISAdateFormat.format(date) + "*1432*^*00501*000001333*1*P*:~";
     private String GS = "GS*HS*RM1P*NCTRACKSBAT*"+ GSdateFormat.format(date) +"*1432*13*X*005010X279A1~";
 
     private String ST;

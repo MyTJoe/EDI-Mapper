@@ -4,7 +4,7 @@ import com.opencsv.bean.CsvBindByName;
 
 public class CSV_Data {
 
-    @CsvBindByName(column = "NPI", required = true)
+    @CsvBindByName(column = "NPI")
     private int provider;
 
     @CsvBindByName(column = "SSN", required = true)
